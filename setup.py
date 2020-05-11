@@ -1,4 +1,5 @@
 import pathlib
+
 from setuptools import setup
 
 # The directory containing this file
@@ -25,7 +26,10 @@ setup(
     ],
     packages=["roku_scanner"],
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        "requests",
+        "xmltodict"
+    ],
     entry_points={
         "console_scripts": [
             "rokuscanner=roku_scanner.__main__:main",
