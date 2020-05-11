@@ -17,9 +17,22 @@ class Roku:
         self.data = asyncio.run(fetch_all_data(self.location))
 
     def as_json(self):
-        new_dict = {data_set['data'] for data_set in self.data.items()}
-        print(new_dict)
-        return json.dumps(self.data)
+        temp: dict = {}
+
+        for data_set in self.data.items():
+            temp.update(data_set[1]['data'])
+
+        return json.dumps(temp)
+
+    def as_xml(self):
+        temp: str = f'<{self.data["device_info"]["data"]["device-info"]["friendly-model-name"]}>\n'
+
+        for data_set in self.data.items():
+            temp += data_set[1]['xml'].replace('<?xml version="1.0" encoding="UTF-8" ?>', '')
+
+        temp += f'</{self.data["device_info"]["data"]["device-info"]["friendly-model-name"]}>\n'
+
+        return temp
 
 
 async def fetch_all_data(roku_location: str) -> dict:
