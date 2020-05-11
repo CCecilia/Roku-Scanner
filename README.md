@@ -1,10 +1,10 @@
-# Roku-Scanner 1.0.2
+# Roku-Scanner 1.0.0
 
 Scans LAN for and connected Roku's and returns available device information.
 
 ## Installation
 ```shell script
-pip install roku
+pip install roku-scanner
 ```
 
 ## Usage
