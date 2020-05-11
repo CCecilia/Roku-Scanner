@@ -19,13 +19,17 @@ class Scanner:
                             f'MAN:"ssdp:discover"\r\n' \
                             f'\r\n' \
 
-        socket_connection: SocketConnection = socket.socket(socket.AF_INET, socket.SOCK_DGRAM,                                               socket.IPPROTO_UDP)
+        print('ssdp_message', ssdp_message)
+
+        socket_connection: SocketConnection = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
         socket_connection.settimeout(self.discovery_timeout)
         socket_connection.sendto(bytes(ssdp_message, 'utf8'), ('239.255.255.250', 1900))
 
         try:
             while True:
                 d, a = socket_connection.recvfrom(65507)
+                print('address', a)
+                print('data', d)
                 address: tuple = a
                 data: bytes = d
                 device_data: DiscoveryData = self.parse_data(data=data)

@@ -20,10 +20,11 @@ def main() -> None:
     parser.add_argument(
         '-s',
         '--search-target-all',
-        type=bool,
-        default=False,
-        required=False,
-        help='Timeout for each device discovery query?'
+        action='store_true',
+        # type=bool,
+        # default=False,
+        # required=False,
+        help='Search for all devices on network including non-Roku devices.'
     )
     args: ArgList = parser.parse_args()
     timeout: int = args.timeout

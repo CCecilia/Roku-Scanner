@@ -7,56 +7,19 @@ import xmltodict
 from .custom_types import DiscoveryData, Response, Task
 
 
-async def fetch_device_info(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/device-info',
-                                  headers={'Content-Type': 'application/xml'})
+class Roku:
+    def __init__(self, location: str, discovery_data: DiscoveryData):
+        self.location: str = location
+        self.discovery_data: DiscoveryData = discovery_data
+        self.data: dict = {}
 
-    if resp.status_code == requests.codes.ok:
-        xml_str: str = resp.text
-        device_data_dict: dict = xmltodict.parse(xml_str)
+    def fetch_data(self) -> dict:
+        self.data = asyncio.run(fetch_all_data(self.location))
 
-        return device_data_dict
-    else:
-        return {'Error': f'Unable to reach device at {roku_location}'}
-
-
-async def fetch_apps(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/apps',
-                                  headers={'Content-Type': 'application/xml'})
-
-    if resp.status_code == requests.codes.ok:
-        xml_str: str = resp.text
-        apps_dict: dict = xmltodict.parse(xml_str)
-
-        return apps_dict
-    else:
-        return {'Error': f'Unable to reach device at {roku_location}'}
-
-
-async def fetch_active_app(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/active-app',
-                                  headers={'Content-Type': 'application/xml'})
-
-    if resp.status_code == requests.codes.ok:
-        xml_str: str = resp.text
-        active_app_dict: dict = xmltodict.parse(xml_str)
-
-        return active_app_dict
-    else:
-        return {'Error': f'Unable to reach device at {roku_location}'}
-
-
-async def fetch_media_player(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/media-player',
-                                  headers={'Content-Type': 'application/xml'})
-
-    if resp.status_code == requests.codes.ok:
-        xml_str: str = resp.text
-        media_player_dict: dict = xmltodict.parse(xml_str)
-
-        return media_player_dict
-    else:
-        return {'Error': f'Unable to reach device at {roku_location}'}
+    def as_json(self):
+        new_dict = {data_set['data'] for data_set in self.data.items()}
+        print(new_dict)
+        return json.dumps(self.data)
 
 
 async def fetch_all_data(roku_location: str) -> dict:
@@ -73,14 +36,65 @@ async def fetch_all_data(roku_location: str) -> dict:
     }
 
 
-class Roku:
-    def __init__(self, location: str, discovery_data: DiscoveryData):
-        self.location: str = location
-        self.discovery_data: DiscoveryData = discovery_data
-        self.data: dict = {}
+async def fetch_device_info(roku_location: str) -> dict:
+    resp: Response = requests.get(f'{roku_location}query/device-info',
+                                  headers={'Content-Type': 'application/xml'})
 
-    def fetch_data(self) -> dict:
-        self.data = asyncio.run(fetch_all_data(self.location))
+    if resp.status_code == requests.codes.ok:
+        xml_str: str = resp.text
+        device_data_dict: dict = xmltodict.parse(xml_str)
 
-    def as_json(self):
-        return json.dumps(self.data)
+        return {
+            'data': device_data_dict,
+            'xml': xml_str
+        }
+    else:
+        return {'Error': f'Unable to reach device at {roku_location}'}
+
+
+async def fetch_apps(roku_location: str) -> dict:
+    resp: Response = requests.get(f'{roku_location}query/apps',
+                                  headers={'Content-Type': 'application/xml'})
+
+    if resp.status_code == requests.codes.ok:
+        xml_str: str = resp.text
+        apps_dict: dict = xmltodict.parse(xml_str)
+
+        return {
+            'data': apps_dict,
+            'xml': xml_str
+        }
+    else:
+        return {'Error': f'Unable to reach device at {roku_location}'}
+
+
+async def fetch_active_app(roku_location: str) -> dict:
+    resp: Response = requests.get(f'{roku_location}query/active-app',
+                                  headers={'Content-Type': 'application/xml'})
+
+    if resp.status_code == requests.codes.ok:
+        xml_str: str = resp.text
+        active_app_dict: dict = xmltodict.parse(xml_str)
+
+        return {
+            'data': active_app_dict,
+            'xml': xml_str
+        }
+    else:
+        return {'Error': f'Unable to reach device at {roku_location}'}
+
+
+async def fetch_media_player(roku_location: str) -> dict:
+    resp: Response = requests.get(f'{roku_location}query/media-player',
+                                  headers={'Content-Type': 'application/xml'})
+
+    if resp.status_code == requests.codes.ok:
+        xml_str: str = resp.text
+        media_player_dict: dict = xmltodict.parse(xml_str)
+
+        return {
+            'data': media_player_dict,
+            'xml': xml_str
+        }
+    else:
+        return {'Error': f'Unable to reach device at {roku_location}'}
