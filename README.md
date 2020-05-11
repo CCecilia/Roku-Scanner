@@ -9,10 +9,47 @@ pip install roku
 
 ## Usage
 
-Normal usage.
+### CLI
 ```shell script
 python -m roku_scanner
 ```
+
+### Importing
+Can used as below.
+```python
+from roku_scanner.scanner import Scanner
+from roku_scanner.roku import Roku
+
+scanner = Scanner()
+scanner.discover()
+
+found_devices = scanner.discovered_devices
+
+for device in found_devices:
+    roku_location = device.get('LOCATION')
+    roku = Roku(location=roku_location, discovery_data=device)
+    roku.fetch_data()
+    detailed_device_data = roku.data
+    print(detailed_device_data)
+```
+
+#### JSON
+```python
+roku_location = device.get('LOCATION')
+roku = Roku(location=roku_location, discovery_data=device)
+roku.fetch_data()
+json_data = roku.as_json()
+```
+
+#### XML
+```python
+roku_location = device.get('LOCATION')
+roku = Roku(location=roku_location, discovery_data=device)
+roku.fetch_data()
+json_data = roku.as_xml()
+```
+
+
 
 ### Options
 Device data output to be in JSON.
