@@ -2,7 +2,7 @@ import asyncio
 import json
 
 import requests
-import xmltodict
+import xmltodict  # type: ignore
 
 from .custom_types import DiscoveryData, Response, Task
 
@@ -13,18 +13,18 @@ class Roku:
         self.discovery_data: DiscoveryData = discovery_data
         self.data: dict = {}
 
-    def fetch_data(self) -> dict:
+    def fetch_data(self) -> None:
         self.data = asyncio.run(fetch_all_data(self.location))
 
-    def as_json(self):
+    def as_json(self) -> str:
         temp: dict = {}
 
         for data_set in self.data.items():
             temp.update(data_set[1]['data'])
 
-        return json.dumps(temp)
+        return json.dumps({self.data["device_info"]["data"]["device-info"]["friendly-model-name"]: temp})
 
-    def as_xml(self):
+    def as_xml(self) -> str:
         temp: str = f'<{self.data["device_info"]["data"]["device-info"]["friendly-model-name"]}>\n'
 
         for data_set in self.data.items():

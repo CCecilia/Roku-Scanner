@@ -39,10 +39,10 @@ def main() -> None:
 
     scanner.discover()
 
+    found_data: str = f'<?xml version="1.0" encoding="UTF-8" ?>\n'
+
     if as_json:
-        data: str = ''
-    else:
-        data: str = f'<?xml version="1.0" encoding="UTF-8" ?>\n'
+        found_data = ''
 
     for device in scanner.discovered_devices:
         server: Union[str, None] = device.get('Server', None)
@@ -54,16 +54,19 @@ def main() -> None:
                 roku.fetch_data()
 
                 if as_json:
-                    data += roku.as_json()
+                    found_data += roku.as_json()
                 else:
-                    data += roku.as_xml()
+                    found_data += roku.as_xml()
             else:
                 raise Exception('Unable to find LOCATION in device data.')
         else:
+            # TODO: find something todo with non roku devices, could be useful?
             unknown_device = device
 
-    # pprint.pprint(data)
-    print(data)
+    if as_json:
+        pprint.pprint(found_data, indent=4)
+    else:
+        print(found_data)
 
 
 if __name__ == "__main__":
