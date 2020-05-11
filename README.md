@@ -1,4 +1,4 @@
-# Roku-Scanner 1.0.0
+# Roku-Scanner 1.0.2
 
 Scans LAN for and connected Roku's and returns available device information.
 

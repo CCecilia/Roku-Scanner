@@ -11,7 +11,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="roku-scanner",
-    version="1.0.1",
+    version="1.0.2",
     description="Scans LAN for and Roku devices and gives device information",
     long_description=README,
     long_description_content_type="text/markdown",
