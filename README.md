@@ -1,6 +1,10 @@
 # Roku-Scanner 1.0.0
 
-Scans LAN for and connected Roku's and returns available device information.
+Scans LAN for any connected Roku's and returns available device information.
+
+### Prerequisites
+* [Python3.X](https://www.python.org/downloads/)
+* PIP - should be installed with python, if not [here](https://pip.pypa.io/en/stable/installing/)
 
 ## Installation
 ```shell script
@@ -14,8 +18,26 @@ pip install roku-scanner
 python -m roku_scanner
 ```
 
-### Importing
-Can used as below.
+#### Options
+Device data output in JSON.
+```shell script
+python -m roku_scanner --json
+```
+
+Increasing timeout on discovery search time. Default is 2 secs. It's advised to use a time less than 10 secs.
+```shell script
+python -m roku_scanner --timeout 5
+```
+
+Change search target to target all devices and not only Roku devices. This will result in non roku devices being added to discovery data. As now(1.0.0) only discovery data is returned for non Roku devices.
+```shell script
+python -m roku_scanner --search-target-all
+```
+
+### Import Examples
+
+#### Discovery and device data fetching
+Discovering Roku's and fetching their device data.
 ```python
 from roku_scanner.scanner import Scanner
 from roku_scanner.roku import Roku
@@ -34,35 +56,60 @@ for device in found_devices:
 ```
 
 #### JSON
+Getting device data in JSON.
 ```python
-roku_location = device.get('LOCATION')
-roku = Roku(location=roku_location, discovery_data=device)
-roku.fetch_data()
-json_data = roku.as_json()
+from roku_scanner.scanner import Scanner
+from roku_scanner.roku import Roku
+
+scanner = Scanner()
+scanner.discover()
+
+found_devices = scanner.discovered_devices
+
+for device in found_devices:
+    roku_location = device.get('LOCATION')
+    roku = Roku(location=roku_location, discovery_data=device)
+    roku.fetch_data()
+    json_data = roku.as_json()
 ```
 
 #### XML
+Getting device data as XML.
 ```python
-roku_location = device.get('LOCATION')
-roku = Roku(location=roku_location, discovery_data=device)
-roku.fetch_data()
-json_data = roku.as_xml()
+from roku_scanner.scanner import Scanner
+from roku_scanner.roku import Roku
+
+scanner = Scanner()
+scanner.discover()
+
+found_devices = scanner.discovered_devices
+
+for device in found_devices:
+    roku_location = device.get('LOCATION')
+    roku = Roku(location=roku_location, discovery_data=device)
+    roku.fetch_data()
+    json_data = roku.as_xml()
 ```
 
+#### Search Target in Scanner
+Changes search target for scanner to search for all devices, this will return Roku devices and any other using [UPnP](https://en.wikipedia.org/wiki/Universal_Plug_and_Play)
+```python
+from roku_scanner.scanner import Scanner
 
-
-### Options
-Device data output to be in JSON.
-```shell script
-python -m roku_scanner --json
+scanner = Scanner(search_target='upnp:rootdevice')
+scanner.discover()
+all_types_of_devices = scanner.discovered_devices
 ```
 
-Increasing timeout on search time. Default is 2 secs. It advised to use a time less than 10 secs.
-```shell script
-python -m roku_scanner --timeout 5
-```
+## Code Standard
+Roku-Scanner follows [PEP 8](https://www.python.org/dev/peps/pep-0008/) standard. 
 
-Change search target to target all devices and not only Roku devices.
-```shell script
-python -m roku_scanner --search-target-all
-```
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/CCecilia/Roku-Scanner/tags).
+
+## Authors
+
+* **Christian Cecilia** - *Initial work*
+
+See also the list of [contributors](https://github.com/CCecilia/Roku-Scanner/graphs/contributors) who participated in this project.

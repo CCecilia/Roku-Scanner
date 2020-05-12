@@ -1,12 +1,13 @@
+# type: ignore
 import pathlib
 
 from setuptools import setup
 
 # The directory containing this file
-cwd = pathlib.Path(__file__).parent
+CWD = pathlib.Path(__file__).parent
 
 # The text of the README file
-README = (cwd / "README.md").read_text()
+README = (CWD / "README.md").read_text()
 
 # This call to setup() does all the work
 setup(
