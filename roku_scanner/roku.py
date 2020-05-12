@@ -17,20 +17,34 @@ class Roku:
         self.data = asyncio.run(fetch_all_data(self.location))
 
     def as_json(self) -> str:
+        try:
+            device_name: str = self.data["device_info"]["data"]["device-info"]["friendly-model-name"]
+        except KeyError:
+            device_name: str = 'unknown-device'
+
         temp: dict = {}
 
         for data_set in self.data.items():
-            temp.update(data_set[1]['data'])
+            data: dict = data_set[1].get('data', None)
+            if data is not None:
+                temp.update(data_set[1]['data'])
 
-        return json.dumps({self.data["device_info"]["data"]["device-info"]["friendly-model-name"]: temp})
+        return json.dumps({device_name: temp})
 
     def as_xml(self) -> str:
-        temp: str = f'<{self.data["device_info"]["data"]["device-info"]["friendly-model-name"]}>\n'
+        try:
+            device_name: str = self.data["device_info"]["data"]["device-info"]["friendly-model-name"]
+        except KeyError:
+            device_name: str = 'unknown-device'
+
+        temp: str = f'<{device_name}>\n'
 
         for data_set in self.data.items():
-            temp += data_set[1]['xml'].replace('<?xml version="1.0" encoding="UTF-8" ?>', '')
+            xml: str = data_set[1].get('xml', None)
+            if xml is not None:
+                temp += data_set[1]['xml'].replace('<?xml version="1.0" encoding="UTF-8" ?>', '')
 
-        temp += f'</{self.data["device_info"]["data"]["device-info"]["friendly-model-name"]}>\n'
+        temp += f'</{device_name}>\n'
 
         return temp
 
