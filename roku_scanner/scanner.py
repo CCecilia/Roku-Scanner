@@ -45,7 +45,7 @@ class Scanner:
 
     def parse_data(self, data: bytes) -> Dict[str, str]:
         decoded_data: str = data.decode('utf8')
-        header_list: list = decoded_data.split('\r\n')
+        header_list: list = decoded_data.split('\n')
         formatted_headers = [self.header_str_to_header_dict(header_str=header_str) for header_str in header_list[1:-2]]
 
         return dict(ChainMap(*formatted_headers))
