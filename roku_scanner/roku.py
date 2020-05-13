@@ -17,10 +17,11 @@ class Roku:
         self.data = asyncio.run(fetch_all_data(self.location))
 
     def as_json(self) -> str:
+        device_name: str = 'unknown-device'
         try:
-            device_name: str = self.data["device_info"]["data"]["device-info"]["friendly-model-name"]
+            device_name = self.data["device_info"]["data"]["device-info"]["default-device-name"]
         except KeyError:
-            device_name: str = 'unknown-device'
+            pass
 
         temp: dict = {}
 
@@ -32,10 +33,11 @@ class Roku:
         return json.dumps({device_name: temp})
 
     def as_xml(self) -> str:
+        device_name: str = 'unknown-device'
         try:
-            device_name: str = self.data["device_info"]["data"]["device-info"]["friendly-model-name"]
+            device_name = self.data["device_info"]["data"]["device-info"]["default-device-name"]
         except KeyError:
-            device_name: str = 'unknown-device'
+            pass
 
         temp: str = f'<{device_name}>\n'
 
