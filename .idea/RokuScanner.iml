@@ -8,4 +8,7 @@
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="C:\Users\chris\PycharmProjects\RokuScanner\requirements-dev.txt" />
   </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="pytest" />
+  </component>
 </module>
