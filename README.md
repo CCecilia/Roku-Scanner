@@ -8,30 +8,30 @@ Scans LAN for any connected Roku's and returns available device information.
 
 ## Installation
 ```shell script
-pip install roku-scanner
+pip3 install roku-scanner
 ```
 
 ## Usage
 
 ### CLI
 ```shell script
-python -m roku_scanner
+python3 -m roku_scanner
 ```
 
 #### Options
 Device data output in JSON.
 ```shell script
-python -m roku_scanner --json
+python3 -m roku_scanner --json
 ```
 
 Increasing timeout on discovery search time. Default is 2 secs. It's advised to use a time less than 10 secs.
 ```shell script
-python -m roku_scanner --timeout 5
+python3 -m roku_scanner --timeout 5
 ```
 
 Change search target to target all devices and not only Roku devices. This will result in non roku devices being added to discovery data. As now(1.0.1) only discovery data is returned for non Roku devices.
 ```shell script
-python -m roku_scanner --search-target-all
+python3 -m roku_scanner --search-target-all
 ```
 
 ### Import Examples
@@ -88,7 +88,7 @@ for device in found_devices:
     roku_location = device.get('LOCATION')
     roku = Roku(location=roku_location, discovery_data=device)
     roku.fetch_data()
-    json_data = roku.as_xml()
+    xml_data = roku.as_xml()
 ```
 
 #### Search Target in Scanner
