@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<player error="false" state="play">
+	<plugin bandwidth="18154358 bps" id="dev" name="testApp"/>
+	<format audio="aac_adts" captions="none" container="hls" drm="none" video="mpeg4_10b"/>
+	<buffering current="1000" max="1000" target="0"/>
+	<new_stream speed="128000 bps"/>
+	<position>88322 ms</position>
+	<duration>120082 ms</duration>
+	<is_live>true</is_live>
+</player>

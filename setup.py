@@ -13,7 +13,7 @@ README = (CWD / "README.md").read_text()
 setup(
     name="roku-scanner",
     version="1.0.0",
-    description="Scans LAN for and Roku devices and gives device information",
+    description="Scans LAN for any Roku devices and fetches device, app, active-app, and player information.",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/CCecilia/Roku-Scanner",

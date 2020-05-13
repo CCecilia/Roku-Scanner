@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<apps>
+	<app id="12" type="appl" version="5.0.81179056">Netflix</app>
+	<app id="50025" type="appl" version="2.1.20200123">Google Play Movies &amp; TV</app>
+	<app id="43465" type="appl" version="4.1.1">fuboTV Watch Live Sports &amp; TV</app>
+	<app id="151908" type="appl" version="2.9.42">The Roku Channel</app>
+	<app id="837" type="appl" version="1.0.91000126">YouTube</app>
+	<app id="63218" type="appl" version="1.10.7">Roku Stream Tester</app>
+	<app id="552944" type="appl" version="1.2.54">Roku Tips &amp; Tricks</app>
+</apps>
