@@ -101,12 +101,18 @@ scanner.discover()
 all_types_of_devices = scanner.discovered_devices
 ```
 
+## Testing
+
+```shell script
+pytest tests/
+```
+
 ## Code Standard
 Roku-Scanner follows [PEP 8](https://www.python.org/dev/peps/pep-0008/) standard. 
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/CCecilia/Roku-Scanner/tags).
+Roku-Scanner uses [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/CCecilia/Roku-Scanner/tags).
 
 ## Authors
 
