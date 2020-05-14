@@ -1,3 +1,4 @@
+# coding=utf-8
 import argparse
 import pprint
 from typing import Union
@@ -8,6 +9,20 @@ from roku_scanner.scanner import Scanner
 
 
 def main() -> None:
+    """
+    Handle cli usage/args of roku scanner
+
+    Example:
+        python3 -m roku_scanner
+
+    CLI-Args:
+        --timeout, -t :: Timeout for each device discovery query
+        --search-target-all, -s :: Search for all devices on network including non-Roku devices
+        --json :: Returns results as json. Default format is xml.
+
+    ToDos:
+        1. find something to do with non roku devices, could be useful?
+    """
     parser: ArgParser = argparse.ArgumentParser()
     parser.add_argument(
         '-t',
@@ -26,7 +41,7 @@ def main() -> None:
     parser.add_argument(
         '--json',
         action='store_true',
-        help='return results as json.'
+        help='Returns results as json.'
     )
     args: ArgList = parser.parse_args()
     timeout: int = args.timeout
@@ -60,7 +75,6 @@ def main() -> None:
             else:
                 raise Exception('Unable to find LOCATION in device data.')
         else:
-            # TODO: find something todo with non roku devices, could be useful?
             unknown_device = device
 
     if as_json:
