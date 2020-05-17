@@ -29,7 +29,7 @@ class Roku:
         """
         self.data = asyncio.run(fetch_all_data(self.location))
 
-    def as_json(self) -> str:
+    def as_json(self, exclude: list) -> str:
         """
         Formats device data into JSON.
         """
@@ -42,13 +42,15 @@ class Roku:
         temp: dict = {}
 
         for data_set in self.data.items():
-            data: dict = data_set[1].get('data', None)
+            if data_set[0] not in exclude:
+                data: dict = data_set[1].get('data', None)
+
             if data is not None:
                 temp.update(data_set[1]['data'])
 
         return json.dumps({device_name: temp})
 
-    def as_xml(self) -> str:
+    def as_xml(self, exclude: list) -> str:
         """
         Formats device data into XML.
         """

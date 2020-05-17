@@ -99,7 +99,7 @@ class Scanner:
     @staticmethod
     def header_str_to_header_dict(header_str: str) -> Dict[str, str]:
         """
-        Formatts socket connection header into a dictionary split at the :.
+        Formats socket connection header into a dictionary split at the :.
 
         *Args:
             header_str (str): header from connection response

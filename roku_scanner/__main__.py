@@ -1,7 +1,20 @@
 # coding=utf-8
+"""
+Usage:
+    python3 -m roku_scanner
+
+CLI-Args:
+    --timeout, -t :: Timeout for each device discovery query
+    --search-target-all, -s :: Search for all devices on network including non-Roku devices
+    --json :: Returns results as json. Default format is xml.
+
+ToDos:
+    1. find something to do with non roku devices, could be useful?
+"""
 import argparse
 import pprint
-from typing import Union
+
+from typing import List, Union
 
 from roku_scanner.custom_types import ArgList, ArgParser
 from roku_scanner.roku import Roku
@@ -11,17 +24,6 @@ from roku_scanner.scanner import Scanner
 def main() -> None:
     """
     Handle cli usage/args of roku scanner
-
-    Example:
-        python3 -m roku_scanner
-
-    CLI-Args:
-        --timeout, -t :: Timeout for each device discovery query
-        --search-target-all, -s :: Search for all devices on network including non-Roku devices
-        --json :: Returns results as json. Default format is xml.
-
-    ToDos:
-        1. find something to do with non roku devices, could be useful?
     """
     parser: ArgParser = argparse.ArgumentParser()
     parser.add_argument(
@@ -43,7 +45,16 @@ def main() -> None:
         action='store_true',
         help='Returns results as json.'
     )
+    parser.add_argument(
+        '--exclude',
+        choices=['device-info', 'apps', 'active-app', 'media-player'],
+        nargs='+',
+        help='Data to exclude from output.'
+    )
     args: ArgList = parser.parse_args()
+    output_exclusions: List[str] = args.exclude
+    if output_exclusions is not None:
+        output_exclusions = list(map(lambda x: x.replace('-', '_'), output_exclusions))
     timeout: int = args.timeout
     search_target_all: bool = args.search_target_all
     as_json: bool = args.json
@@ -67,11 +78,11 @@ def main() -> None:
             if roku_location is not None:
                 roku = Roku(location=roku_location, discovery_data=device)
                 roku.fetch_data()
-
+                found_data += roku.as_json(output_exclusions)
                 if as_json:
-                    found_data += roku.as_json()
+                    found_data += roku.as_json(output_exclusions)
                 else:
-                    found_data += roku.as_xml()
+                    found_data += roku.as_xml(output_exclusions)
             else:
                 raise Exception('Unable to find LOCATION in device data.')
         else:
