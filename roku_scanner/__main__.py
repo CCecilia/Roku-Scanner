@@ -79,7 +79,7 @@ def main() -> None:
             if roku_location is not None:
                 roku = Roku(location=roku_location, discovery_data=device)
                 roku.fetch_data()
-                found_data += roku.as_json(output_exclusions)
+
                 if as_json:
                     found_data += roku.as_json(output_exclusions)
                 else:
