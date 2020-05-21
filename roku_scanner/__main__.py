@@ -55,6 +55,7 @@ def main() -> None:
     output_exclusions: List[str] = args.exclude
     if output_exclusions is not None:
         output_exclusions = list(map(lambda x: x.replace('-', '_'), output_exclusions))
+
     timeout: int = args.timeout
     search_target_all: bool = args.search_target_all
     as_json: bool = args.json

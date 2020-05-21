@@ -4,7 +4,7 @@ import pathlib
 import requests
 import socket
 
-from typing import Dict, TypedDict, Union
+from typing import Dict, TypedDict
 
 """
 Type Descriptions

@@ -60,3 +60,19 @@ def test_roku_as_xml(mock_device_data, discovery_data):
     formatted = roku.as_xml()
     assert isinstance(formatted, str)
     assert len(formatted) != 0
+
+
+def test_roku_as_xml_with_exclusions(mock_device_data, discovery_data):
+    roku: Roku = Roku(location='http://127.0.0.1:8060/', discovery_data=discovery_data)
+    roku.data = mock_device_data
+    formatted = roku.as_xml(exclude=['device_info'])
+    assert isinstance(formatted, str)
+    assert len(formatted) != 0
+
+
+def test_roku_as_json_with_exclusions(mock_device_data):
+    roku: Roku = Roku(location='http://127.0.0.1:8060/', discovery_data=discovery_data)
+    roku.data = mock_device_data
+    formatted = roku.as_json(exclude=['device_info'])
+    assert isinstance(formatted, str)
+    assert len(formatted) != 0

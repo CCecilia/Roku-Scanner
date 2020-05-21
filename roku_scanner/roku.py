@@ -25,11 +25,11 @@ class Roku:
 
     def fetch_data(self) -> None:
         """
-        Intermediate function to request further device data from fetch_all_data()
+        Intermediary function to request further device data from fetch_all_data()
         """
         self.data = asyncio.run(fetch_all_data(self.location))
 
-    def as_json(self, exclude: list) -> str:
+    def as_json(self, exclude: Union[list, None] = None) -> str:
         """
         Formats device data into JSON.
         """
@@ -42,15 +42,19 @@ class Roku:
         temp: dict = {}
 
         for data_set in self.data.items():
-            if data_set[0] not in exclude:
-                data: dict = data_set[1].get('data', None)
+            data: Union[dict, None] = None
+            if exclude is not None:
+                if data_set[0] not in exclude:
+                    data = data_set[1].get('data', None)
+            else:
+                data = data_set[1].get('data', None)
 
             if data is not None:
                 temp.update(data_set[1]['data'])
 
         return json.dumps({device_name: temp})
 
-    def as_xml(self, exclude: list) -> str:
+    def as_xml(self, exclude: Union[list, None] = None) -> str:
         """
         Formats device data into XML.
         """
@@ -63,7 +67,13 @@ class Roku:
         temp: str = f'<{device_name}>\n'
 
         for data_set in self.data.items():
-            xml: str = data_set[1].get('xml', None)
+            xml: Union[dict, None] = None
+            if exclude is not None:
+                if data_set[0] not in exclude:
+                    xml = data_set[1].get('xml', None)
+            else:
+                xml = data_set[1].get('xml', None)
+
             if xml is not None:
                 temp += data_set[1]['xml'].replace('<?xml version="1.0" encoding="UTF-8" ?>', '')
 
