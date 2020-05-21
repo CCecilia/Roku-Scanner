@@ -1,22 +1,38 @@
+# coding=utf-8
 import asyncio
 import json
-
 import requests
 import xmltodict  # type: ignore
 
-from .custom_types import DiscoveryData, Response, Task
+from typing import Dict, Union
+
+from .custom_types import DiscoveryData, EcpData, Response, Task
 
 
 class Roku:
+    """
+    Gets detailed device information and handles formatting.
+
+    *Attributes:
+        location (str): Location(ip) to Roku device. Comes from location header during discovery.
+        discovery_data (DiscoveryData): Device discovery data. See custom_types
+        data (dict): Fetched data from ECP requests.
+    """
     def __init__(self, location: str, discovery_data: DiscoveryData):
         self.location: str = location
         self.discovery_data: DiscoveryData = discovery_data
         self.data: dict = {}
 
     def fetch_data(self) -> None:
+        """
+        Intermediary function to request further device data from fetch_all_data()
+        """
         self.data = asyncio.run(fetch_all_data(self.location))
 
-    def as_json(self) -> str:
+    def as_json(self, exclude: Union[list, None] = None) -> str:
+        """
+        Formats device data into JSON.
+        """
         device_name: str = 'unknown-device'
         try:
             device_name = self.data["device_info"]["data"]["device-info"]["default-device-name"]
@@ -26,13 +42,22 @@ class Roku:
         temp: dict = {}
 
         for data_set in self.data.items():
-            data: dict = data_set[1].get('data', None)
+            data: Union[dict, None] = None
+            if exclude is not None:
+                if data_set[0] not in exclude:
+                    data = data_set[1].get('data', None)
+            else:
+                data = data_set[1].get('data', None)
+
             if data is not None:
                 temp.update(data_set[1]['data'])
 
         return json.dumps({device_name: temp})
 
-    def as_xml(self) -> str:
+    def as_xml(self, exclude: Union[list, None] = None) -> str:
+        """
+        Formats device data into XML.
+        """
         device_name: str = 'unknown-device'
         try:
             device_name = self.data["device_info"]["data"]["device-info"]["default-device-name"]
@@ -42,7 +67,13 @@ class Roku:
         temp: str = f'<{device_name}>\n'
 
         for data_set in self.data.items():
-            xml: str = data_set[1].get('xml', None)
+            xml: Union[dict, None] = None
+            if exclude is not None:
+                if data_set[0] not in exclude:
+                    xml = data_set[1].get('xml', None)
+            else:
+                xml = data_set[1].get('xml', None)
+
             if xml is not None:
                 temp += data_set[1]['xml'].replace('<?xml version="1.0" encoding="UTF-8" ?>', '')
 
@@ -52,6 +83,23 @@ class Roku:
 
 
 async def fetch_all_data(roku_location: str) -> dict:
+    """
+    Create async tasks for requesting more data from device.
+
+    *Args:
+        roku_location (str): IP address to device.
+
+    *Returns (dict): {
+        'device_info': data from {roku_location}:8060/query/device-info
+        'apps': data from {roku_location}:8060/query/apps,
+        'active_app': data from {roku_location}:8060/query/active-app,
+        'media_player': data from {roku_location}:8060/query/media-player
+    }
+
+    *Note:
+        Roku ECP
+        https://developer.roku.com/docs/developer-program/debugging/external-control-api.md
+    """
     device_info: Task = asyncio.create_task(fetch_device_info(roku_location))
     apps: Task = asyncio.create_task(fetch_apps(roku_location))
     active_app: Task = asyncio.create_task(fetch_active_app(roku_location))
@@ -65,9 +113,17 @@ async def fetch_all_data(roku_location: str) -> dict:
     }
 
 
-async def fetch_device_info(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/device-info',
-                                  headers={'Content-Type': 'application/xml'})
+async def fetch_device_info(roku_location: str) -> Union[EcpData, Dict[str, str]]:
+    """
+    Makes GET request for device info following Roku ECP.
+
+    *Args:
+        roku_location (str): IP address to device.
+
+    *Returns
+        (EcpData): device data in dict form and the raw xml returned or error.
+    """
+    resp: Response = requests.get(f'{roku_location}query/device-info', headers={'Content-Type': 'application/xml'})
 
     if resp.status_code == requests.codes.ok:
         xml_str: str = resp.text
@@ -81,9 +137,17 @@ async def fetch_device_info(roku_location: str) -> dict:
         return {'Error': f'Unable to reach device at {roku_location}'}
 
 
-async def fetch_apps(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/apps',
-                                  headers={'Content-Type': 'application/xml'})
+async def fetch_apps(roku_location: str) -> Union[EcpData, Dict[str, str]]:
+    """
+    Makes GET request for apps following Roku ECP.
+
+    *Args:
+        roku_location (str): IP address to device.
+
+    *Returns
+        (EcpData): app data in dict form and the raw xml returned or error.
+    """
+    resp: Response = requests.get(f'{roku_location}query/apps', headers={'Content-Type': 'application/xml'})
 
     if resp.status_code == requests.codes.ok:
         xml_str: str = resp.text
@@ -97,9 +161,17 @@ async def fetch_apps(roku_location: str) -> dict:
         return {'Error': f'Unable to reach device at {roku_location}'}
 
 
-async def fetch_active_app(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/active-app',
-                                  headers={'Content-Type': 'application/xml'})
+async def fetch_active_app(roku_location: str) -> Union[EcpData, Dict[str, str]]:
+    """
+    Makes GET request for active-app following Roku ECP.
+
+    *Args:
+        roku_location (str): IP address to device.
+
+    *Returns
+        (EcpData): active-app data in dict form and the raw xml returned or error.
+    """
+    resp: Response = requests.get(f'{roku_location}query/active-app', headers={'Content-Type': 'application/xml'})
 
     if resp.status_code == requests.codes.ok:
         xml_str: str = resp.text
@@ -113,9 +185,17 @@ async def fetch_active_app(roku_location: str) -> dict:
         return {'Error': f'Unable to reach device at {roku_location}'}
 
 
-async def fetch_media_player(roku_location: str) -> dict:
-    resp: Response = requests.get(f'{roku_location}query/media-player',
-                                  headers={'Content-Type': 'application/xml'})
+async def fetch_media_player(roku_location: str) -> Union[EcpData, Dict[str, str]]:
+    """
+    Makes GET request for media player following Roku ECP.
+
+    *Args:
+        roku_location (str): IP address to device.
+
+    *Returns
+        (EcpData): media player data in dict form and the raw xml returned or error.
+    """
+    resp: Response = requests.get(f'{roku_location}query/media-player', headers={'Content-Type': 'application/xml'})
 
     if resp.status_code == requests.codes.ok:
         xml_str: str = resp.text
