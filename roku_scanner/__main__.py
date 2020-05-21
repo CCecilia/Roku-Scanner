@@ -7,6 +7,7 @@ CLI-Args:
     --timeout, -t :: Timeout for each device discovery query
     --search-target-all, -s :: Search for all devices on network including non-Roku devices
     --json :: Returns results as json. Default format is xml.
+    --exclude :: Excludes certain ECP data from the output.
 
 ToDos:
     1. find something to do with non roku devices, could be useful?

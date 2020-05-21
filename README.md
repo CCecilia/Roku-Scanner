@@ -34,6 +34,16 @@ Change search target to target all devices and not only Roku devices. This will 
 python3 -m roku_scanner --search-target-all
 ```
 
+Excluding data from output.
+```shell script
+python3 -m roku_scanner --exclude device-info
+```
+Exclusion Options
+* device-info
+* apps
+* active-app 
+* media-player
+
 ### Import Examples
 
 #### Discovery and device data fetching
