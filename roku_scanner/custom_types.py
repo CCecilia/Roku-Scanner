@@ -4,7 +4,7 @@ import pathlib
 import requests
 import socket
 
-from typing import Dict, TypedDict
+from typing import Dict, TypedDict, Union
 
 """
 Type Descriptions
@@ -47,6 +47,34 @@ class DeviceData(TypedDict):
     media_player: EcpData
 
 
+class RokuApp(TypedDict):
+    """
+    *Attributes
+        id: str
+        type: str
+        subtype: str
+        version: str
+        name: str
+    """
+    id: str
+    type: str
+    subtype: Union[None, str]
+    version: str
+    name: str
+    active: bool
+
+
+class Player(TypedDict):
+    """
+    *Attributes
+        error: str
+        state: str
+    """
+    error: str
+    state: str
+    is_live: bool
+    format: dict
+
 ArgList = argparse.Namespace
 ArgParser = argparse.ArgumentParser
 SocketConnection = socket.socket
@@ -54,3 +82,4 @@ DiscoveryData = Dict[str, str]
 Response = requests.models.Response
 Task = asyncio.Task
 PathType = pathlib.Path
+DeviceInfoAttribute = Union[str, None]
