@@ -24,7 +24,7 @@ class Scanner:
         self.discovered_devices: list = []
         self.search_target: str = search_target
 
-    def discover(self) -> List[DiscoveryData]:
+    def discover(self, verbose: bool = False) -> List[DiscoveryData]:
         """
         Sets up socket connection for SSDP discovery and handles formatting responses into a list of DiscoveryData
 
@@ -47,6 +47,9 @@ class Scanner:
                 raw_data: tuple = socket_connection.recvfrom(65507)
                 data: bytes = raw_data[0]
                 device_data: DiscoveryData = self.parse_data(data=data)
+                if verbose:
+                    print(f'Found Device {device_data["LOCATION"]}')
+
                 self.discovered_devices.append(device_data)
         except socket.timeout:
             pass

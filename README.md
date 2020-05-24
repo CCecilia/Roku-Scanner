@@ -24,6 +24,11 @@ Device data output in JSON.
 python3 -m roku_scanner --json
 ```
 
+Pretty print JSON. Can only be used with json flag.
+```shell script
+python3 -m roku_scanner --json --pretty
+```
+
 Increasing timeout on discovery search time. Default is 2 secs. It's advised to use a time less than 10 secs.
 ```shell script
 python3 -m roku_scanner --timeout 5
@@ -32,6 +37,11 @@ python3 -m roku_scanner --timeout 5
 Change search target to target all devices and not only Roku devices. This will result in non roku devices being added to discovery data. As now(1.0.2) only discovery data is returned for non Roku devices.
 ```shell script
 python3 -m roku_scanner --search-target-all
+```
+
+Verbose Logging
+```shell script
+python3 -m roku_scanner --verbose
 ```
 
 Excluding data from output.
