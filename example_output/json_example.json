@@ -1,0 +1,1544 @@
+{"devices": [{
+    "RokuUltra-YJ0007343543": {
+        "active-app": {
+            "app": "Roku",
+            "screensaver": {
+                "#text": "Aquatic Life",
+                "@id": "261525",
+                "@type": "ssvr",
+                "@version": "13.0.90000006"
+            }
+        },
+        "apps": {
+            "app": [
+                {
+                    "#text": "Netflix",
+                    "@id": "12",
+                    "@type": "appl",
+                    "@version": "5.0.81179056"
+                },
+                {
+                    "#text": "Google Play Movies & TV",
+                    "@id": "50025",
+                    "@type": "appl",
+                    "@version": "2.1.20200123"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Hulu",
+                    "@id": "2285",
+                    "@type": "appl",
+                    "@version": "6.30.3"
+                },
+                {
+                    "#text": "Sling TV",
+                    "@id": "46041",
+                    "@type": "appl",
+                    "@version": "6.14.252"
+                },
+                {
+                    "#text": "The Roku Channel",
+                    "@id": "151908",
+                    "@type": "appl",
+                    "@version": "2.9.42"
+                },
+                {
+                    "#text": "VUDU",
+                    "@id": "13842",
+                    "@type": "appl",
+                    "@version": "1.3.302814"
+                },
+                {
+                    "#text": "YouTube",
+                    "@id": "837",
+                    "@type": "appl",
+                    "@version": "1.0.91000130"
+                },
+                {
+                    "#text": "Prime Video",
+                    "@id": "13",
+                    "@type": "appl",
+                    "@version": "11.2.2020051517"
+                },
+                {
+                    "#text": "Cartoon Network",
+                    "@id": "164003",
+                    "@type": "appl",
+                    "@version": "2.7.403200108"
+                },
+                {
+                    "#text": "Roku Stream Tester",
+                    "@id": "63218",
+                    "@type": "appl",
+                    "@version": "1.10.7"
+                },
+                {
+                    "#text": "Roku Tips & Tricks",
+                    "@id": "552944",
+                    "@type": "appl",
+                    "@version": "1.2.54"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465_1583",
+                    "@type": "appl",
+                    "@version": "3.1.7"
+                },
+                {
+                    "#text": "HGTV GO",
+                    "@id": "75619",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "DOGTV Channel",
+                    "@id": "18127",
+                    "@type": "appl",
+                    "@version": "1.12.10898"
+                },
+                {
+                    "#text": "Food Network GO",
+                    "@id": "75617",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "ESPN",
+                    "@id": "34376",
+                    "@type": "appl",
+                    "@version": "3.0.2020051200"
+                },
+                {
+                    "#text": "NOGGIN Preschool kids shows",
+                    "@id": "91195",
+                    "@type": "appl",
+                    "@version": "3.3.137"
+                },
+                {
+                    "#text": "VICE TV",
+                    "@id": "83900",
+                    "@type": "appl",
+                    "@version": "2.9.1"
+                },
+                {
+                    "#text": "MTV",
+                    "@id": "73386",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "Paramount Network",
+                    "@id": "74218",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "AT&T TV",
+                    "@id": "140474",
+                    "@type": "appl",
+                    "@version": "3.19.2250102"
+                },
+                {
+                    "#text": "PlayStation Vue",
+                    "@id": "93374",
+                    "@type": "appl",
+                    "@version": "1.0.9"
+                },
+                {
+                    "#text": "Apple TV",
+                    "@id": "551012",
+                    "@type": "appl",
+                    "@version": "3.1.93"
+                },
+                {
+                    "#text": "Disney Plus",
+                    "@id": "291097",
+                    "@type": "appl",
+                    "@version": "1.5.2020051500"
+                },
+                {
+                    "#text": "fuboTV PreCert",
+                    "@id": "292070",
+                    "@type": "appl",
+                    "@version": "4.1.5"
+                },
+                {
+                    "#text": "Roku Media Player",
+                    "@id": "2213",
+                    "@type": "appl",
+                    "@version": "4.2.1657"
+                },
+                {
+                    "#text": "4K Spotlight",
+                    "@id": "69091",
+                    "@type": "appl",
+                    "@version": "2.8.25"
+                },
+                {
+                    "#text": "Roku Streaming Player Intro",
+                    "@id": "184661",
+                    "@type": "appl",
+                    "@version": "1.0.38"
+                },
+                {
+                    "#text": "Nightly QA",
+                    "@id": "570442",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Nightly QA - DEBUG",
+                    "@id": "578746",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Xfinity Stream Beta",
+                    "@id": "123132",
+                    "@type": "appl",
+                    "@version": "5.1.1"
+                },
+                {
+                    "#text": "fuboTV",
+                    "@id": "dev",
+                    "@type": "appl",
+                    "@version": "4.1.4"
+                }
+            ]
+        },
+        "device-info": {
+            "advertising-id": "4ee31d54-408d-4811-8ded-dda860a15f36",
+            "build-number": "469.30E04170A",
+            "can-use-wifi-extender": "true",
+            "clock-format": "12-hour",
+            "country": "US",
+            "davinci-version": "2.8.20",
+            "default-device-name": "Roku Ultra - YJ0007223434",
+            "developer-enabled": "true",
+            "device-id": "CS32C4324324",
+            "ethernet-mac": "23:3a:34:e5:34:b3",
+            "find-remote-is-possible": "true",
+            "friendly-device-name": "Roku Ultra",
+            "friendly-model-name": "Roku Ultra",
+            "grandcentral-version": "3.1.39",
+            "has-mobile-screensaver": "true",
+            "has-play-on-roku": "true",
+            "has-wifi-5G-support": "true",
+            "has-wifi-extender": "false",
+            "headphones-connected": "false",
+            "is-stick": "false",
+            "is-tv": "false",
+            "keyed-developer-id": "4ee31d54-408d-4811-8ded-dda860a15f36",
+            "language": "en",
+            "locale": "en_US",
+            "model-name": "Roku Ultra",
+            "model-number": "4660RW",
+            "model-region": "US",
+            "network-type": "ethernet",
+            "notifications-enabled": "true",
+            "notifications-first-use": "true",
+            "power-mode": "PowerOn",
+            "search-channels-enabled": "true",
+            "search-enabled": "true",
+            "secure-device": "true",
+            "serial-number": "YJ0007432432",
+            "software-build": "4170",
+            "software-version": "9.3.0",
+            "support-url": "roku.com/support",
+            "supports-audio-guide": "true",
+            "supports-ecs-microphone": "true",
+            "supports-ecs-textedit": "true",
+            "supports-ethernet": "true",
+            "supports-find-remote": "true",
+            "supports-private-listening": "true",
+            "supports-rva": "true",
+            "supports-suspend": "false",
+            "supports-wake-on-wlan": "false",
+            "time-zone": "US/Eastern",
+            "time-zone-auto": "true",
+            "time-zone-name": "United States/Eastern",
+            "time-zone-offset": "-240",
+            "time-zone-tz": "America/New_York",
+            "trc-channel-version": "2.9.42",
+            "trc-version": "3.0",
+            "udn": "4ee31d54-408d-4811-8ded-dda860a15f36",
+            "uptime": "118241",
+            "user-device-location": "Home Office",
+            "user-device-name": "Roku Ultra",
+            "vendor-name": "Roku",
+            "voice-search-enabled": "true",
+            "wifi-driver": "realtek",
+            "wifi-mac": "c8:3a:6b:e5:42:b2"
+        },
+        "player": {
+            "@error": "false",
+            "@state": "close"
+        }
+    }
+},{
+    "TCL\u2022RokuTV-YK00M423423432": {
+        "active-app": {
+            "app": {
+                "#text": "YouTube",
+                "@id": "837",
+                "@subtype": "ndka",
+                "@type": "appl",
+                "@version": "1.0.80000286"
+            }
+        },
+        "apps": {
+            "app": [
+                {
+                    "#text": "HDMI\u00a01",
+                    "@id": "tvinput.hdmi1",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "Antenna\u00a0TV",
+                    "@id": "tvinput.dtv",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "Netflix",
+                    "@id": "12",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "5.0.81179056"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Hulu",
+                    "@id": "2285",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "6.30.3"
+                },
+                {
+                    "#text": "VUDU",
+                    "@id": "13842",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "1.3.302814"
+                },
+                {
+                    "#text": "YouTube",
+                    "@id": "837",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "1.0.80000286"
+                },
+                {
+                    "#text": "Prime Video",
+                    "@id": "13",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "11.2.2020051517"
+                },
+                {
+                    "#text": "Cartoon Network",
+                    "@id": "164003",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.7.403200108"
+                },
+                {
+                    "#text": "Roku Stream Tester",
+                    "@id": "63218",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.10.7"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465_1583",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.1.7"
+                },
+                {
+                    "#text": "HGTV GO",
+                    "@id": "75619",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "DOGTV Channel",
+                    "@id": "18127",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.12.10898"
+                },
+                {
+                    "#text": "Roku Tips & Tricks",
+                    "@id": "552944",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.2.54"
+                },
+                {
+                    "#text": "Food Network GO",
+                    "@id": "75617",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "ESPN",
+                    "@id": "34376",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.0.2020051200"
+                },
+                {
+                    "#text": "NOGGIN Preschool kids shows",
+                    "@id": "91195",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.3.137"
+                },
+                {
+                    "#text": "VICE TV",
+                    "@id": "83900",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.9.1"
+                },
+                {
+                    "#text": "MTV",
+                    "@id": "73386",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "Paramount Network",
+                    "@id": "74218",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "Roku Media Player",
+                    "@id": "2213",
+                    "@subtype": "sdka",
+                    "@type": "appl",
+                    "@version": "4.2.1657"
+                },
+                {
+                    "#text": "Roku TV Intro",
+                    "@id": "45706",
+                    "@subtype": "sdka",
+                    "@type": "appl",
+                    "@version": "1.0.41"
+                },
+                {
+                    "#text": "Sling TV",
+                    "@id": "46041",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "6.14.252"
+                },
+                {
+                    "#text": "The Roku Channel",
+                    "@id": "151908",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.9.42"
+                },
+                {
+                    "#text": "AT&T TV",
+                    "@id": "140474",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.19.2250102"
+                },
+                {
+                    "#text": "PlayStation Vue",
+                    "@id": "93374",
+                    "@subtype": "sdka",
+                    "@type": "appl",
+                    "@version": "1.0.9"
+                },
+                {
+                    "#text": "Google Play Movies & TV",
+                    "@id": "50025",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.1.20200123"
+                },
+                {
+                    "#text": "Apple TV",
+                    "@id": "551012",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "3.1.93"
+                },
+                {
+                    "#text": "Disney Plus",
+                    "@id": "291097",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.5.2020051500"
+                },
+                {
+                    "#text": "fuboTV PreCert",
+                    "@id": "292070",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.5"
+                },
+                {
+                    "#text": "Nightly QA",
+                    "@id": "570442",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Nightly QA - DEBUG",
+                    "@id": "578746",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Xfinity Stream Beta",
+                    "@id": "123132",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "5.1.1"
+                },
+                {
+                    "#text": "fuboTV",
+                    "@id": "dev",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.8.0"
+                }
+            ]
+        },
+        "device-info": {
+            "advertising-id": "4ee31d54-408d-4811-8ded-dda860a15f36\n\n",
+            "build-number": "489.20E04504A",
+            "can-use-wifi-extender": "true",
+            "clock-format": "12-hour",
+            "country": "US",
+            "davinci-version": "2.8.20",
+            "default-device-name": "TCL\u2022Roku TV - YK00MA324324",
+            "developer-enabled": "true",
+            "device-id": "J9D8C23423432",
+            "find-remote-is-possible": "false",
+            "friendly-device-name": "Charlottes TV",
+            "friendly-model-name": "TCL\u2022Roku TV",
+            "grandcentral-version": "2.9.57",
+            "has-mobile-screensaver": "false",
+            "has-play-on-roku": "true",
+            "has-wifi-5G-support": "true",
+            "has-wifi-extender": "false",
+            "headphones-connected": "false",
+            "is-stick": "false",
+            "is-tv": "true",
+            "keyed-developer-id": null,
+            "language": "en",
+            "locale": "en_US",
+            "model-name": "32S321",
+            "model-number": "8112X",
+            "model-region": "US",
+            "network-name": "SkyNet",
+            "network-type": "wifi",
+            "notifications-enabled": "true",
+            "notifications-first-use": "true",
+            "panel-id": "9",
+            "power-mode": "PowerOn",
+            "screen-size": "32",
+            "search-channels-enabled": "true",
+            "search-enabled": "true",
+            "secure-device": "true",
+            "serial-number": "YK003423423",
+            "software-build": "4504",
+            "software-version": "9.2.0",
+            "support-url": "tclusa.com/support",
+            "supports-audio-guide": "true",
+            "supports-ecs-microphone": "true",
+            "supports-ecs-textedit": "true",
+            "supports-ethernet": "false",
+            "supports-find-remote": "true",
+            "supports-private-listening": "true",
+            "supports-private-listening-dtv": "true",
+            "supports-rva": "true",
+            "supports-suspend": "true",
+            "supports-wake-on-wlan": "true",
+            "supports-warm-standby": "true",
+            "time-zone": "US/Eastern",
+            "time-zone-auto": "true",
+            "time-zone-name": "United States/Eastern",
+            "time-zone-offset": "-240",
+            "time-zone-tz": "America/New_York",
+            "trc-channel-version": "2.9.42",
+            "trc-version": "3.0",
+            "tuner-type": "ATSC",
+            "udn": "4ee31d54-408d-4811-8ded-dda860a15f36",
+            "uptime": "203166",
+            "user-device-location": "Charlotte's Room",
+            "user-device-name": "Charlottes TV",
+            "vendor-name": "TCL",
+            "voice-search-enabled": "true",
+            "wifi-driver": "realtek",
+            "wifi-mac": "c4:98:5c:9a:00:ba"
+        },
+        "player": {
+            "@error": "false",
+            "@state": "play",
+            "format": {
+                "@audio": "aac_adts",
+                "@captions": "none",
+                "@drm": "none",
+                "@video": "vp9"
+            },
+            "is_live": "false",
+            "plugin": {
+                "@bandwidth": "10000000 bps",
+                "@id": "837",
+                "@name": "YouTube"
+            },
+            "position": "445044 ms"
+        }
+    }
+},{
+    "RokuExpress-YG00423432423": {
+        "active-app": {
+            "app": "Roku",
+            "screensaver": {
+                "#text": "City Stroll: Movie Magic",
+                "@id": "55545",
+                "@type": "ssvr",
+                "@version": "3.0.35"
+            }
+        },
+        "apps": {
+            "app": [
+                {
+                    "#text": "Netflix",
+                    "@id": "12",
+                    "@type": "appl",
+                    "@version": "5.0.81121038"
+                },
+                {
+                    "#text": "Prime Video",
+                    "@id": "13",
+                    "@type": "appl",
+                    "@version": "11.2.2020051517"
+                },
+                {
+                    "#text": "YouTube",
+                    "@id": "837",
+                    "@type": "appl",
+                    "@version": "1.0.80000286"
+                },
+                {
+                    "#text": "Sling TV",
+                    "@id": "46041",
+                    "@type": "appl",
+                    "@version": "6.13.248"
+                },
+                {
+                    "#text": "Hulu",
+                    "@id": "2285",
+                    "@type": "appl",
+                    "@version": "6.30.3"
+                },
+                {
+                    "#text": "The Roku Channel",
+                    "@id": "151908",
+                    "@type": "appl",
+                    "@version": "2.9.42"
+                },
+                {
+                    "#text": "VUDU",
+                    "@id": "13842",
+                    "@type": "appl",
+                    "@version": "1.3.302814"
+                },
+                {
+                    "#text": "DOGTV Channel",
+                    "@id": "18127",
+                    "@type": "appl",
+                    "@version": "2.0.33"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465",
+                    "@type": "appl",
+                    "@version": "4.1.1"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465_1583",
+                    "@type": "appl",
+                    "@version": "3.1.7"
+                },
+                {
+                    "#text": "Roku Stream Tester",
+                    "@id": "63218",
+                    "@type": "appl",
+                    "@version": "1.9.0"
+                },
+                {
+                    "#text": "Roku Tips & Tricks",
+                    "@id": "552944",
+                    "@type": "appl",
+                    "@version": "1.2.46"
+                },
+                {
+                    "#text": "HGTV GO",
+                    "@id": "75619",
+                    "@type": "appl",
+                    "@version": "3.10.1"
+                },
+                {
+                    "#text": "Roku Media Player",
+                    "@id": "2213",
+                    "@type": "appl",
+                    "@version": "4.2.1657"
+                },
+                {
+                    "#text": "Roku Streaming Player Intro",
+                    "@id": "184661",
+                    "@type": "appl",
+                    "@version": "1.0.38"
+                },
+                {
+                    "#text": "Food Network GO",
+                    "@id": "75617",
+                    "@type": "appl",
+                    "@version": "3.10.1"
+                },
+                {
+                    "#text": "ESPN",
+                    "@id": "34376",
+                    "@type": "appl",
+                    "@version": "2.9.2019100100"
+                },
+                {
+                    "#text": "Cartoon Network",
+                    "@id": "164003",
+                    "@type": "appl",
+                    "@version": "2.3.716190102"
+                },
+                {
+                    "#text": "NOGGIN Preschool kids shows",
+                    "@id": "91195",
+                    "@type": "appl",
+                    "@version": "2.14.105"
+                },
+                {
+                    "#text": "VICE TV",
+                    "@id": "83900",
+                    "@type": "appl",
+                    "@version": "2.5.3"
+                },
+                {
+                    "#text": "MTV",
+                    "@id": "73386",
+                    "@type": "appl",
+                    "@version": "2.16.116"
+                },
+                {
+                    "#text": "Paramount Network",
+                    "@id": "74218",
+                    "@type": "appl",
+                    "@version": "2.12.94"
+                },
+                {
+                    "#text": "AT&T TV",
+                    "@id": "140474",
+                    "@type": "appl",
+                    "@version": "3.2.809"
+                },
+                {
+                    "#text": "PlayStation Vue",
+                    "@id": "93374",
+                    "@type": "appl",
+                    "@version": "3.1.1"
+                },
+                {
+                    "#text": "Google Play Movies & TV",
+                    "@id": "50025",
+                    "@type": "appl",
+                    "@version": "2.0.20191014"
+                },
+                {
+                    "#text": "Apple TV",
+                    "@id": "551012",
+                    "@type": "appl",
+                    "@version": "1.1.125"
+                },
+                {
+                    "#text": "Disney Plus",
+                    "@id": "291097",
+                    "@type": "appl",
+                    "@version": "1.5.2020051500"
+                },
+                {
+                    "#text": "fuboTV PreCert",
+                    "@id": "292070",
+                    "@type": "appl",
+                    "@version": "3.8.0"
+                },
+                {
+                    "#text": "Nightly QA",
+                    "@id": "570442",
+                    "@type": "appl",
+                    "@version": "4.0.0"
+                },
+                {
+                    "#text": "Nightly QA - DEBUG",
+                    "@id": "578746",
+                    "@type": "appl",
+                    "@version": "4.0.0"
+                },
+                {
+                    "#text": "Xfinity Stream Beta",
+                    "@id": "123132",
+                    "@type": "appl",
+                    "@version": "5.1.1"
+                },
+                {
+                    "#text": "fuboTV",
+                    "@id": "dev",
+                    "@type": "appl",
+                    "@version": "3.8.0"
+                }
+            ]
+        },
+        "device-info": {
+            "advertising-id": "4ee31d54-408d-4811-8ded-dda860a15f36\n\n",
+            "build-number": "519.30E04170A",
+            "can-use-wifi-extender": "true",
+            "clock-format": "12-hour",
+            "country": "US",
+            "davinci-version": "2.8.20",
+            "default-device-name": "Roku Express - YG00233423",
+            "developer-enabled": "true",
+            "device-id": "C437D34223423",
+            "find-remote-is-possible": "false",
+            "friendly-device-name": "Chris and Ambers Tv",
+            "friendly-model-name": "Roku Express",
+            "grandcentral-version": "3.1.39",
+            "has-mobile-screensaver": "false",
+            "has-play-on-roku": "true",
+            "has-wifi-5G-support": "false",
+            "has-wifi-extender": "false",
+            "headphones-connected": "false",
+            "is-stick": "false",
+            "is-tv": "false",
+            "keyed-developer-id": null,
+            "language": "en",
+            "locale": "en_US",
+            "model-name": "Roku Express",
+            "model-number": "3900RW",
+            "model-region": "US",
+            "network-name": "SkyNet",
+            "network-type": "wifi",
+            "notifications-enabled": "true",
+            "notifications-first-use": "true",
+            "power-mode": "PowerOn",
+            "search-channels-enabled": "true",
+            "search-enabled": "true",
+            "secure-device": "true",
+            "serial-number": "YG0022423423",
+            "software-build": "4170",
+            "software-version": "9.3.0",
+            "support-url": "roku.com/support",
+            "supports-audio-guide": "true",
+            "supports-ecs-microphone": "true",
+            "supports-ecs-textedit": "true",
+            "supports-ethernet": "false",
+            "supports-find-remote": "true",
+            "supports-private-listening": "true",
+            "supports-rva": "true",
+            "supports-suspend": "false",
+            "supports-wake-on-wlan": "false",
+            "time-zone": "US/Eastern",
+            "time-zone-auto": "true",
+            "time-zone-name": "United States/Eastern",
+            "time-zone-offset": "-240",
+            "time-zone-tz": "America/New_York",
+            "trc-channel-version": "2.9.42",
+            "trc-version": "3.0",
+            "udn": "4ee31d54-408d-4811-8ded-dda860a15f36",
+            "uptime": "590233",
+            "user-device-location": "Master bedroom",
+            "user-device-name": "Chris and Ambers Tv",
+            "vendor-name": "Roku",
+            "voice-search-enabled": "true",
+            "wifi-driver": "realtek",
+            "wifi-mac": "c8:3a:6b:dd:4f:fe"
+        },
+        "player": {
+            "@error": "false",
+            "@state": "close"
+        }
+    }
+},{
+    "TCL\u2022RokuTV-YN00432432423": {
+        "active-app": {
+            "app": "Roku"
+        },
+        "apps": {
+            "app": [
+                {
+                    "#text": "HDMI\u00a01",
+                    "@id": "tvinput.hdmi1",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "HDMI\u00a03\u00a0(ARC)",
+                    "@id": "tvinput.hdmi3",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "Antenna\u00a0TV",
+                    "@id": "tvinput.dtv",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "Netflix",
+                    "@id": "12",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "4.2.81179088"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Hulu",
+                    "@id": "2285",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "6.30.3"
+                },
+                {
+                    "#text": "VUDU",
+                    "@id": "13842",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "1.3.302814"
+                },
+                {
+                    "#text": "YouTube",
+                    "@id": "837",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "1.0.80000286"
+                },
+                {
+                    "#text": "Prime Video",
+                    "@id": "13",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "11.2.2020051517"
+                },
+                {
+                    "#text": "Cartoon Network",
+                    "@id": "164003",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.7.403200108"
+                },
+                {
+                    "#text": "Roku Stream Tester",
+                    "@id": "63218",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.10.7"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465_1583",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.1.7"
+                },
+                {
+                    "#text": "HGTV GO",
+                    "@id": "75619",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "DOGTV Channel",
+                    "@id": "18127",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.12.10898"
+                },
+                {
+                    "#text": "Roku Tips & Tricks",
+                    "@id": "552944",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.2.54"
+                },
+                {
+                    "#text": "Food Network GO",
+                    "@id": "75617",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "ESPN",
+                    "@id": "34376",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.0.2020051200"
+                },
+                {
+                    "#text": "NOGGIN Preschool kids shows",
+                    "@id": "91195",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.3.137"
+                },
+                {
+                    "#text": "VICE TV",
+                    "@id": "83900",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.9.1"
+                },
+                {
+                    "#text": "MTV",
+                    "@id": "73386",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "Paramount Network",
+                    "@id": "74218",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "Roku Media Player",
+                    "@id": "2213",
+                    "@subtype": "sdka",
+                    "@type": "appl",
+                    "@version": "4.2.1657"
+                },
+                {
+                    "#text": "4K Spotlight",
+                    "@id": "69091",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.8.25"
+                },
+                {
+                    "#text": "Roku TV Intro",
+                    "@id": "45706",
+                    "@subtype": "sdka",
+                    "@type": "appl",
+                    "@version": "1.0.41"
+                },
+                {
+                    "#text": "Sling TV",
+                    "@id": "46041",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "6.14.252"
+                },
+                {
+                    "#text": "The Roku Channel",
+                    "@id": "151908",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.9.42"
+                },
+                {
+                    "#text": "AT&T TV",
+                    "@id": "140474",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.19.2250102"
+                },
+                {
+                    "#text": "PlayStation Vue",
+                    "@id": "93374",
+                    "@subtype": "sdka",
+                    "@type": "appl",
+                    "@version": "1.0.9"
+                },
+                {
+                    "#text": "Google Play Movies & TV",
+                    "@id": "50025",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "2.1.20200123"
+                },
+                {
+                    "#text": "Apple TV",
+                    "@id": "551012",
+                    "@subtype": "ndka",
+                    "@type": "appl",
+                    "@version": "3.1.93"
+                },
+                {
+                    "#text": "Disney Plus",
+                    "@id": "291097",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "1.5.2020051500"
+                },
+                {
+                    "#text": "fuboTV PreCert",
+                    "@id": "292070",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.5"
+                },
+                {
+                    "#text": "Nightly QA",
+                    "@id": "570442",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Nightly QA - DEBUG",
+                    "@id": "578746",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Xfinity Stream Beta",
+                    "@id": "123132",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "5.1.1"
+                },
+                {
+                    "#text": "fuboTV",
+                    "@id": "dev",
+                    "@subtype": "rsga",
+                    "@type": "appl",
+                    "@version": "3.8.0"
+                }
+            ]
+        },
+        "device-info": {
+            "advertising-id": "4ee31d54-408d-4811-8ded-dda860a15f36\n\n",
+            "build-number": "309.20E04504A",
+            "can-use-wifi-extender": "true",
+            "clock-format": "12-hour",
+            "country": "US",
+            "davinci-version": "2.8.20",
+            "default-device-name": "TCL\u2022Roku TV - YN00XF12342342",
+            "developer-enabled": "true",
+            "device-id": "NM93432430",
+            "ethernet-mac": "34:93:42:c5:5b:ec",
+            "expert-pq-enabled": "0.9",
+            "find-remote-is-possible": "false",
+            "friendly-device-name": "50\" 4k TV",
+            "friendly-model-name": "TCL\u2022Roku TV",
+            "grandcentral-version": "2.9.57",
+            "has-mobile-screensaver": "true",
+            "has-play-on-roku": "true",
+            "has-wifi-5G-support": "true",
+            "has-wifi-extender": "false",
+            "headphones-connected": "false",
+            "is-stick": "false",
+            "is-tv": "true",
+            "keyed-developer-id": null,
+            "language": "en",
+            "locale": "en_US",
+            "model-name": "50S421",
+            "model-number": "7141X",
+            "model-region": "US",
+            "network-name": "SkyNet",
+            "network-type": "wifi",
+            "notifications-enabled": "true",
+            "notifications-first-use": "true",
+            "panel-id": "40",
+            "power-mode": "Headless",
+            "screen-size": "50",
+            "search-channels-enabled": "true",
+            "search-enabled": "true",
+            "secure-device": "true",
+            "serial-number": "YN00XF4234234",
+            "software-build": "4504",
+            "software-version": "9.2.0",
+            "support-url": "tclusa.com/support",
+            "supports-audio-guide": "true",
+            "supports-ecs-microphone": "true",
+            "supports-ecs-textedit": "true",
+            "supports-ethernet": "true",
+            "supports-find-remote": "true",
+            "supports-private-listening": "true",
+            "supports-private-listening-dtv": "true",
+            "supports-rva": "true",
+            "supports-suspend": "true",
+            "supports-wake-on-wlan": "true",
+            "supports-warm-standby": "true",
+            "time-zone": "US/Eastern",
+            "time-zone-auto": "true",
+            "time-zone-name": "United States/Eastern",
+            "time-zone-offset": "-240",
+            "time-zone-tz": "America/New_York",
+            "trc-channel-version": "2.9.42",
+            "trc-version": "3.0",
+            "tuner-type": "ATSC",
+            "udn": "4ee31d54-408d-4811-8ded-dda860a15f36",
+            "uptime": "589804",
+            "user-device-location": "Living room",
+            "user-device-name": "50\" 4k TV",
+            "vendor-name": "TCL",
+            "voice-search-enabled": "true",
+            "wifi-driver": "realtek",
+            "wifi-mac": "c4:98:5c:dd:c7:a6"
+        },
+        "player": {
+            "@error": "false",
+            "@state": "close",
+            "format": {
+                "@audio": "aac_adts",
+                "@captions": "none",
+                "@drm": "none",
+                "@video": "mpeg4_10b"
+            },
+            "is_live": "false",
+            "position": "59756121 ms"
+        }
+    }
+},{
+    "TCL\u2022RokuTV-YK00D4234324": {
+        "active-app": {
+            "app": {
+                "#text": "YouTube",
+                "@id": "837",
+                "@type": "appl",
+                "@version": "1.0.91000130"
+            }
+        },
+        "apps": {
+            "app": [
+                {
+                    "#text": "Switch",
+                    "@id": "tvinput.hdmi1",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "Xbox",
+                    "@id": "tvinput.hdmi3",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "Live\u00a0TV",
+                    "@id": "tvinput.dtv",
+                    "@type": "tvin",
+                    "@version": "1.0.0"
+                },
+                {
+                    "#text": "Netflix",
+                    "@id": "12",
+                    "@type": "appl",
+                    "@version": "5.0.81179056"
+                },
+                {
+                    "#text": "Google Play Movies & TV",
+                    "@id": "50025",
+                    "@type": "appl",
+                    "@version": "2.1.20200123"
+                },
+                {
+                    "#text": "Xfinity Stream Beta",
+                    "@id": "123132",
+                    "@type": "appl",
+                    "@version": "5.1.1"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Hulu",
+                    "@id": "2285",
+                    "@type": "appl",
+                    "@version": "6.30.3"
+                },
+                {
+                    "#text": "The Roku Channel",
+                    "@id": "151908",
+                    "@type": "appl",
+                    "@version": "2.9.42"
+                },
+                {
+                    "#text": "Sling TV",
+                    "@id": "46041",
+                    "@type": "appl",
+                    "@version": "6.14.252"
+                },
+                {
+                    "#text": "VUDU",
+                    "@id": "13842",
+                    "@type": "appl",
+                    "@version": "1.3.302814"
+                },
+                {
+                    "#text": "YouTube",
+                    "@id": "837",
+                    "@type": "appl",
+                    "@version": "1.0.91000130"
+                },
+                {
+                    "#text": "Prime Video",
+                    "@id": "13",
+                    "@type": "appl",
+                    "@version": "11.2.2020051517"
+                },
+                {
+                    "#text": "Cartoon Network",
+                    "@id": "164003",
+                    "@type": "appl",
+                    "@version": "2.7.403200108"
+                },
+                {
+                    "#text": "Roku Tips & Tricks",
+                    "@id": "552944",
+                    "@type": "appl",
+                    "@version": "1.2.54"
+                },
+                {
+                    "#text": "Roku Stream Tester",
+                    "@id": "63218",
+                    "@type": "appl",
+                    "@version": "1.10.7"
+                },
+                {
+                    "#text": "fuboTV Watch Live Sports & TV",
+                    "@id": "43465_1583",
+                    "@type": "appl",
+                    "@version": "3.1.7"
+                },
+                {
+                    "#text": "HGTV GO",
+                    "@id": "75619",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "DOGTV Channel",
+                    "@id": "18127",
+                    "@type": "appl",
+                    "@version": "1.12.10898"
+                },
+                {
+                    "#text": "Food Network GO",
+                    "@id": "75617",
+                    "@type": "appl",
+                    "@version": "3.17.0"
+                },
+                {
+                    "#text": "ESPN",
+                    "@id": "34376",
+                    "@type": "appl",
+                    "@version": "3.0.2020051200"
+                },
+                {
+                    "#text": "NOGGIN Preschool kids shows",
+                    "@id": "91195",
+                    "@type": "appl",
+                    "@version": "3.3.137"
+                },
+                {
+                    "#text": "VICE TV",
+                    "@id": "83900",
+                    "@type": "appl",
+                    "@version": "2.9.1"
+                },
+                {
+                    "#text": "MTV",
+                    "@id": "73386",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "Paramount Network",
+                    "@id": "74218",
+                    "@type": "appl",
+                    "@version": "3.2.134"
+                },
+                {
+                    "#text": "AT&T TV",
+                    "@id": "140474",
+                    "@type": "appl",
+                    "@version": "3.19.2250102"
+                },
+                {
+                    "#text": "PlayStation Vue",
+                    "@id": "93374",
+                    "@type": "appl",
+                    "@version": "1.0.9"
+                },
+                {
+                    "#text": "Apple TV",
+                    "@id": "551012",
+                    "@type": "appl",
+                    "@version": "3.1.93"
+                },
+                {
+                    "#text": "Disney Plus",
+                    "@id": "291097",
+                    "@type": "appl",
+                    "@version": "1.5.2020051500"
+                },
+                {
+                    "#text": "fuboTV PreCert",
+                    "@id": "292070",
+                    "@type": "appl",
+                    "@version": "4.1.5"
+                },
+                {
+                    "#text": "Nightly QA",
+                    "@id": "570442",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Nightly QA - DEBUG",
+                    "@id": "578746",
+                    "@type": "appl",
+                    "@version": "4.1.3"
+                },
+                {
+                    "#text": "Roku Media Player",
+                    "@id": "2213",
+                    "@type": "appl",
+                    "@version": "4.2.1657"
+                },
+                {
+                    "#text": "Roku TV Intro",
+                    "@id": "45706",
+                    "@type": "appl",
+                    "@version": "1.0.41"
+                }
+            ]
+        },
+        "device-info": {
+            "advertising-id": "4ee31d54-408d-4811-8ded-dda860a15f36\n\n",
+            "build-number": "489.30E04175A",
+            "can-use-wifi-extender": "true",
+            "clock-format": "12-hour",
+            "country": "US",
+            "davinci-version": "2.8.20",
+            "default-device-name": "TCL\u2022Roku TV - YK00DM3242343",
+            "developer-enabled": "false",
+            "device-id": "N4324234234",
+            "find-remote-is-possible": "false",
+            "friendly-device-name": "Giovannis TV",
+            "friendly-model-name": "TCL\u2022Roku TV",
+            "grandcentral-version": "3.1.39",
+            "has-mobile-screensaver": "false",
+            "has-play-on-roku": "true",
+            "has-wifi-5G-support": "true",
+            "has-wifi-extender": "false",
+            "headphones-connected": "false",
+            "is-stick": "false",
+            "is-tv": "true",
+            "keyed-developer-id": null,
+            "language": "en",
+            "locale": "en_US",
+            "model-name": "32S331",
+            "model-number": "8121X",
+            "model-region": "US",
+            "network-name": "SkyNet",
+            "network-type": "wifi",
+            "notifications-enabled": "true",
+            "notifications-first-use": "true",
+            "panel-id": "17",
+            "power-mode": "PowerOn",
+            "screen-size": "32",
+            "search-channels-enabled": "true",
+            "search-enabled": "true",
+            "secure-device": "true",
+            "serial-number": "YK00D4324324",
+            "software-build": "4175",
+            "software-version": "9.3.0",
+            "support-url": "tclusa.com/support",
+            "supports-audio-guide": "true",
+            "supports-ecs-microphone": "true",
+            "supports-ecs-textedit": "true",
+            "supports-ethernet": "false",
+            "supports-find-remote": "true",
+            "supports-private-listening": "true",
+            "supports-private-listening-dtv": "true",
+            "supports-rva": "true",
+            "supports-suspend": "true",
+            "supports-wake-on-wlan": "true",
+            "supports-warm-standby": "true",
+            "time-zone": "US/Eastern",
+            "time-zone-auto": "true",
+            "time-zone-name": "United States/Eastern",
+            "time-zone-offset": "-240",
+            "time-zone-tz": "America/New_York",
+            "trc-channel-version": "2.9.42",
+            "trc-version": "3.0",
+            "tuner-type": "ATSC",
+            "udn": "4ee31d54-408d-4811-8ded-dda860a15f36",
+            "uptime": "63235",
+            "user-device-location": "Giovanni's Room",
+            "user-device-name": "Giovannis TV",
+            "vendor-name": "TCL",
+            "voice-search-enabled": "true",
+            "wifi-driver": "realtek",
+            "wifi-mac": "34:f1:50:df:6c:fa"
+        },
+        "player": {
+            "@error": "false",
+            "@state": "play",
+            "format": {
+                "@audio": "opus",
+                "@captions": "none",
+                "@drm": "none",
+                "@video": "vp9"
+            },
+            "is_live": "false",
+            "plugin": {
+                "@bandwidth": "1468006 bps",
+                "@id": "837",
+                "@name": "YouTube"
+            },
+            "position": "2206967 ms"
+        }
+    }
+}]}

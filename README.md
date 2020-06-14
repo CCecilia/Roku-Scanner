@@ -3,7 +3,7 @@
 Scans LAN for any connected Roku's and returns available device information.
 
 ### Prerequisites
-* [Python3.X](https://www.python.org/downloads/)
+* [Python3.8+](https://www.python.org/downloads/)
 * PIP - should be installed with python, if not [here](https://pip.pypa.io/en/stable/installing/)
 
 ## Installation
@@ -53,6 +53,8 @@ Exclusion Options
 * apps
 * active-app 
 * media-player
+
+### Output Examples
 
 ### Import Examples
 

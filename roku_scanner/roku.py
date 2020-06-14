@@ -290,7 +290,7 @@ class Roku:
         except KeyError:
             pass
 
-        temp: str = f'<{device_name}>\n'
+        temp: str = f'<device name="{device_name}">\n'
 
         for data_set in self.data.items():
             xml: Union[dict, None] = None
@@ -303,7 +303,7 @@ class Roku:
             if xml is not None:
                 temp += data_set[1]['xml'].replace('<?xml version="1.0" encoding="UTF-8" ?>', '')
 
-        temp += f'</{device_name}>\n'
+        temp += '</device>\n'
 
         return temp
 

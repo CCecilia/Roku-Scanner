@@ -93,7 +93,8 @@ def main() -> None:
     scanner.discover(verbose=verbose)
     verbose_logging('Scanning Complete', verbose)
 
-    found_data: str = f'<?xml version="1.0" encoding="UTF-8" ?>\n'
+    found_data: str = f'<?xml version="1.0" encoding="UTF-8" ?>\n' \
+                      f'<devices>\n'
 
     if as_json:
         found_data = '{"devices": ['
@@ -119,7 +120,7 @@ def main() -> None:
         json_out = found_data[:-1] + ']}'
         print(json_out)
     else:
-        print(found_data)
+        print(found_data + '</devices>')
 
 
 if __name__ == "__main__":
