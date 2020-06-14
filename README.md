@@ -55,6 +55,8 @@ Exclusion Options
 * media-player
 
 ### Output Examples
+* [JSON example](https://github.com/CCecilia/Roku-Scanner/blob/master/example_output/json_example.json)
+* [XML example](https://github.com/CCecilia/Roku-Scanner/blob/master/example_output/xml_example.xml)
 
 ### Import Examples
 
