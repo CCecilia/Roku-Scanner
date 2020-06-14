@@ -1,4 +1,4 @@
-# Roku-Scanner 1.0.3
+# Roku-Scanner 1.0.2
 
 Scans LAN for any connected Roku's and returns available device information.
 
@@ -34,7 +34,7 @@ Increasing timeout on discovery search time. Default is 2 secs. It's advised to 
 python3 -m roku_scanner --timeout 5
 ```
 
-Change search target to target all devices and not only Roku devices. This will result in non roku devices being added to discovery data. As now(1.0.3) only discovery data is returned for non Roku devices.
+Change search target to target all devices and not only Roku devices. This will result in non roku devices being added to discovery data. As now(1.0.2) only discovery data is returned for non Roku devices.
 ```shell script
 python3 -m roku_scanner --search-target-all
 ```
