@@ -19,7 +19,7 @@ pluggy==0.13.1
 post==2019.4.13
 public==2019.4.13
 py==1.8.1
-Pygments==2.6.1
+Pygments==2.7.4
 pyparsing==2.4.7
 pytest==5.4.2
 query-string==2019.4.13
